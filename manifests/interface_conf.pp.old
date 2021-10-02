@@ -1,0 +1,9 @@
+define lvm::interface_conf {
+  file { $title:
+    ensure  => file,
+    path    => "/root/int-${title}.conf",
+    content => template('lvm/interfaces.erb')
+
+  }
+
+}
